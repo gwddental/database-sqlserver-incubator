@@ -630,7 +630,7 @@ class SqlServerGrammar extends Grammar
      *
      * @return string
      */
-    protected function whereJsonContainsKey(Builder $query, array $where)
+    protected function whereJsonContainsKey(Builder $query, array $where): string
     {
         $not = $where['not'] ? 'not ' : '';
 
