@@ -16,11 +16,14 @@ use Exception;
 use Hyperf\Collection\Arr;
 use Hyperf\Database\Connectors\Connector;
 use Hyperf\Database\Connectors\ConnectorInterface;
+use Hyperf\Database\Sqlsrv\DetectsLostConnections;
 use Hyperf\Database\Sqlsrv\Exception\InvalidDriverException;
 use PDO;
 
 class SqlServerConnector extends Connector implements ConnectorInterface
 {
+    use DetectsLostConnections;
+
     /**
      * The PDO connection options.
      *

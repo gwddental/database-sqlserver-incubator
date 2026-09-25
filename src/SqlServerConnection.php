@@ -21,6 +21,8 @@ use Hyperf\Database\Sqlsrv\Schema\SqlServerBuilder;
 
 class SqlServerConnection extends Connection
 {
+    use DetectsLostConnections;
+
     /**
      * Get a schema builder instance for the connection.
      */
